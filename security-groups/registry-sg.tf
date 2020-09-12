@@ -38,7 +38,7 @@ resource "aws_security_group_rule" "registry_ingress_22" {
   to_port	= 22
 }
 
-resource "aws_security_group_rule" "registry_ingress_22" {
+resource "aws_security_group_rule" "registry_ingress_53" {
   security_group_id = aws_security_group.registry-sg.id
   type  	= "ingress"
   cidr_blocks 	= [var.cidr_blocks]
