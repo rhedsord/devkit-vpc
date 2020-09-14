@@ -1,8 +1,8 @@
 resource "aws_vpc" "cluster_vpc" {
   cidr_block       = var.cidr_blocks
   instance_tenancy = "default"
-  enable_dns_support = true
-  enable_dns_hostnames = true
+  enable_dns_support = false
+  enable_dns_hostnames = false
 
   tags = merge(
   var.default_tags,
