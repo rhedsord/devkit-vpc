@@ -84,7 +84,7 @@ resource "aws_vpc_endpoint" "private_ec2" {
   service_name =  data.aws_vpc_endpoint_service.ec2.service_name
   vpc_endpoint_type = "Interface"
 
-  private_dns_enabled = false
+  private_dns_enabled = true
 
   security_group_ids = [
   aws_security_group.private_ec2_api.id
@@ -143,7 +143,7 @@ resource "aws_vpc_endpoint" "elasticloadbalancing" {
   vpc_id            = aws_vpc.cluster_vpc.id
   service_name      = data.aws_vpc_endpoint_service.elasticloadbalancing.service_name
   vpc_endpoint_type = "Interface"
-  private_dns_enabled = false
+  private_dns_enabled = true
 
   security_group_ids = [
   aws_security_group.private_ec2_api.id
