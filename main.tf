@@ -14,6 +14,7 @@ module "vpc" {
   vpc_public_subnet_cidrs = var.vpc_public_subnet_cidrs
 }
 
+/*
 module "security-groups" {
   source = "./security-groups"
 
@@ -31,6 +32,7 @@ module "iam-roles" {
   aws_region = var.aws_region
   default_tags = var.default_tags
 }
+*/
 
 module "route-53" {
   source = "./route-53"
@@ -42,7 +44,7 @@ module "route-53" {
   default_tags = var.default_tags
 }
 
-
+/*
 module "bastion-node" {
   source = "./bastion-node"
 
@@ -74,3 +76,4 @@ module "registry-node" {
   registry_volume = var.registry_volume
   ssh_public_key = var.ssh_public_key
 }
+*/
